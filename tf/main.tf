@@ -10,6 +10,7 @@ terraform {
 provider "auth0" {}
 
 // Starting terraform configs
+//testing
 
 resource "auth0_client" "my_client" {
   name            = "WebAppExample"
