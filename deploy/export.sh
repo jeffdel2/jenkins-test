@@ -1,1 +1,1 @@
-a0deploy --help
+a0deploy --version
