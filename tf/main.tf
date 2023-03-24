@@ -1,5 +1,3 @@
-terraform init
-
 terraform {
   required_providers {
     auth0 = {
