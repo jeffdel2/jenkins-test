@@ -8,3 +8,17 @@ terraform {
 }
 
 provider "auth0" {}
+
+// Starting terraform configs
+
+resource "auth0_client" "my_client" {
+  name            = "WebAppExample"
+  description     = "My Web App Created Through Terraform"
+  app_type        = "regular_web"
+  callbacks       = ["http://localhost:3000/callback"]
+  oidc_conformant = true
+
+  jwt_configuration {
+    alg = "RS256"
+  }
+}
