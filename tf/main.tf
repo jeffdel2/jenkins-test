@@ -22,3 +22,16 @@ resource "auth0_client" "my_client" {
     alg = "RS256"
   }
 }
+
+resource "auth0_organization" "my_organization" {
+  name         = "terra-inc"
+  display_name = "Terra Incorporated"
+
+  branding {
+    logo_url = "https://icons-for-free.com/download-icon-Terraform-1329545833434920628_512.png"
+    colors = {
+      primary         = "#f2f2f2"
+      page_background = "#e1e1e1"
+    }
+  }
+}
