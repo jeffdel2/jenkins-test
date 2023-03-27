@@ -12,8 +12,8 @@ provider "auth0" {}
 // Starting terraform configs
 
 resource "auth0_client" "my_client" {
-  name            = "WebAppExampleUpdated"
-  description     = "My Web App Created Through Terraform again"
+  name            = "WebAppExample"
+  description     = "My Web App Created Through Terraform Updated"
   app_type        = "regular_web"
   callbacks       = ["http://localhost:3000/callback"]
   oidc_conformant = true
