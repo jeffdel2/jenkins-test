@@ -23,6 +23,18 @@ resource "auth0_client" "my_client" {
   }
 }
 
+resource "auth0_client" "my_client" {
+  name            = "BrandNewWebAppExample"
+  description     = "My Web App Created using Terraform"
+  app_type        = "regular_web"
+  callbacks       = ["http://localhost:8000/callback"]
+  oidc_conformant = true
+
+  jwt_configuration {
+    alg = "RS256"
+  }
+}
+
 resource "auth0_organization" "my_organization" {
   name         = "terra-inc"
   display_name = "Terra v2 Incorporated"
