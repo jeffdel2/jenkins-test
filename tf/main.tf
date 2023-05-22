@@ -13,7 +13,7 @@ provider "auth0" {}
 
 resource "auth0_client" "my_client" {
   name            = "WebAppExample"
-  description     = "My Web App Created and Updated Through Terraform"
+  description     = "My Web App Created via Terraform"
   app_type        = "regular_web"
   callbacks       = ["http://localhost:3000/callback"]
   oidc_conformant = true
