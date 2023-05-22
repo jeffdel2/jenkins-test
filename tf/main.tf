@@ -23,7 +23,7 @@ resource "auth0_client" "my_client" {
   }
 }
 
-resource "new_auth0_client" "my_new_client" {
+resource "auth0_client" "my_new_client" {
   name            = "BrandNewWebAppExample"
   description     = "My Web App Created using Terraform"
   app_type        = "regular_web"
